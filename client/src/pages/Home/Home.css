@@ -1,0 +1,11 @@
+/* Home page specific styles */
+.home-container {
+  min-height: 100vh;
+}
+
+/* Additional responsive adjustments for home page */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 0;
+  }
+}

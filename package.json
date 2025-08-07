@@ -1,0 +1,26 @@
+{
+  "name": "cravenow",
+  "version": "1.0.0",
+  "description": "A modern food delivery application built with React and Node.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd client && npm run dev",
+    "build": "npm install --prefix client && npm install --prefix server && npm run build --prefix client",
+    "server": "cd server && npm start",
+    "server:dev": "cd server && npm run dev",
+    "dev:full": "concurrently \"npm run server:dev\" \"npm run dev\"",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "keywords": [
+    "food-delivery",
+    "react",
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "CraveNow Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
