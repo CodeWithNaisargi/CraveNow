@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const JWT_SECRET = 'GPBLdmegSvczNNMzzJDuz+9fbezstV6aGLjPCtkD61Y=';
+const JWT_SECRET = process.env.JWT_SECRET;
 
 // Middleware
 app.use(cors());
@@ -127,3 +127,6 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   console.log(`Test the server: http://localhost:${PORT}/api/test`);
 }); 
+app.get('/', (req, res) => {
+  res.send('Auth Server is running 🔐🚀');
+});
